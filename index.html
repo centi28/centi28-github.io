@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="Css/style.css" rel="stylesheet"> -->
+    <title>Exercise Handling Toggle Events</title>
+    <style>
+       .ball {
+
+            width: 70px;
+            height: 70px;
+            background-image: url('../Exercise1_VincentPascua/Images/basketball.png');
+            /* background-color: red; */
+            border-radius: 100%;
+            position: relative;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(100px); }
+            100% { transform: translateY(0); }
+        }
+
+        .ball.playing {
+            animation-name: move;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading in H1 format -->
+    <h1>Sample CSS keyframe animation</h1>
+
+
+
+    <!-- Section for basketball -->
+    <section class="basketball">
+        <label>Dribbling the ball</label>
+        <button id="basketballButton">Play/stop</button>
+        <div class="ball"></div> 
+    </section>
+
+    <script>
+      
+        // Add event listener to the basketball button
+        document.getElementById("basketballButton").addEventListener("click", function() {
+            var ball = document.querySelector(".ball");
+            // Toggle the "playing" class
+            ball.classList.toggle("playing");
+        });
+    </script>
+</body>
+</html>

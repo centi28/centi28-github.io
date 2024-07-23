@@ -1,0 +1,190 @@
+
+*{
+    box-sizing: border-box;
+}
+
+/* Background color */
+body{
+    background-color: azure;
+}
+/* Style for h1 */
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+/* For the baseball */
+.baseball{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.ball1{
+    width: 70px;
+    background-image: url('../Images/baseball.png'); /* Change into baseball image instead of a plain circle */
+    aspect-ratio: 1;
+    border-radius: 100%;
+
+    /* Declaration for a one-time animation from Chatgpt */
+    animation: pass 1s ease-in-out alternate-reverse infinite paused; /* Animation name, duration, timing function, direction, iteration count and play state */
+
+}
+@keyframes pass{
+    0%{
+       transform: translateX(0);
+    }
+   
+    100%{
+        transform: translateX(300px);
+        
+    }
+   }
+
+.ball1:nth-child(3){
+    animation-delay: .1s;
+}
+
+
+input[type="checkbox"]:checked ~ .ball1{
+    animation-play-state:running;
+   
+}
+
+input[type="checkbox"]{
+    width: 30px;
+    aspect-ratio: 1;
+   
+}
+
+
+/* For basketball */
+.balls{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.ball{
+    width: 70px;
+    background-image: url('../Images/basketball.png');/* Change into ball image instead of a plain circle */
+    aspect-ratio: 1;
+    border-radius: 100%;
+
+     /* Declaration for a one-time animation from Chatgpt */
+     animation: bounce 1s ease-in-out alternate-reverse infinite paused; /* Animation name, duration, timing function, direction, iteration count and play state */
+
+}
+
+@keyframes bounce{
+    0%{
+       transform: translateY(0);
+    }
+    
+    100%{
+        transform: translateY(250px);
+        
+    }
+   }    
+
+   .ball:nth-child(3){
+    animation-delay: .1s;
+    }
+
+    input[type="checkbox"]:checked ~ .ball{
+        animation-play-state:running;
+       
+    }
+
+    input[type="checkbox"]{
+        width: 30px;
+        aspect-ratio: 1;
+       
+    }
+
+    label{
+        font-size: 1.5em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+
+
+    /* CSS */
+/* 
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    } */
+
+    button{
+        padding: 10px 20px;
+        background-color: aquamarine;
+        color: black;
+        border: none;
+        margin: 20px;
+        font-size: 120%;
+    }
+
+    .roundCorners{
+        border-radius: 50%;
+        transform: rotate(720deg) scale(.5);
+    }
+    img{
+        transition: all .5s;
+    }
+
+    .container{
+        width: 70px;
+        background-image: url('../Images/basketball.png');/* Change into ball image instead of a plain circle */
+        aspect-ratio: 1;
+        border-radius: 100%;
+    
+         /* Declaration for a one-time animation from Chatgpt */
+         animation: bounce2 1s ease-in-out alternate-reverse infinite paused; /* Animation name, duration, timing function, direction, iteration count and play state */
+    
+    }
+    
+    @keyframes bounce2{
+        0%{
+           transform: translateY(0);
+        }
+        
+        100%{
+            transform: translateY(250px);
+            
+        }
+       }    
+    
+
+    .roundCorners{
+        border-radius: 50%;
+        transform: rotate(720deg) scale(.5);
+    }
+    img{
+        transition: all .5s;
+    }
+    
+       .ball:nth-child(3){
+        animation-delay: .1s;
+        }
+/*     
+        input[type="checkbox"]:checked ~ .ball{
+            animation-play-state:running;
+           
+        }
+    
+        input[type="checkbox"]{
+            width: 30px;
+            aspect-ratio: 1;
+           
+        } */
+    
+        label{
+            font-size: 1.5em;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
